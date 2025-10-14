@@ -1,0 +1,176 @@
+PSEUDO CODES
+
+1.	Check whether a number is even or odd
+Start
+Read number n
+If n % 2 == 0
+	Print n is even
+else if 
+	print n is odd
+else
+	print n is 0
+end if
+End
+
+2.	Find the largest of three numbers
+Start
+Read three numbers a,b,c
+If a>b and a>c
+	Print a is greater
+Else if b>c 
+	Print b is greater
+Else
+	Print c is greater
+End if
+End
+
+3.	Display the multiplication table for any number
+Start
+Read the number n whose multiplication table is to be printed
+For i=1 to 10
+	Print n,”x”,i,”=”,i*n
+End for loop
+End
+
+4.	Calculate the sum of first N natural numbers
+Start
+Read the number n
+Int sum=0
+For i=1 to n
+	sum=sum+i
+End for loop
+Print sum
+End
+
+5.	Find the factorial of a number
+Start
+Read the number n whose factorial is to be finded
+Int factorial=1
+For i=1 to n
+	factorial=factorial*i
+end for
+print factorial
+end
+
+6.	Calculate the average and grade of 5 subject marks
+Start
+Read the marks of 5 subjects m1,m2,m3,m4,m5
+sum=(m1+m2+m3+m4+m5)
+print “Average is”,sum/5
+per=(sum/500)*100  //assuming 500 is the total marks
+If per > 90
+	Print A+
+Else if per > 81 and per <= 90
+	Print A
+Else if per > 71 and per <= 80
+	Print B+
+Else if per >  61 and per <= 70
+	Print B
+Else if per > 51 and per <= 60
+	Print C+
+Else if per > 41 and per <= 50
+	Print C
+Else if per > 31 and per <= 40
+	Print D+
+Else if per > 21 and per <= 30
+	Print D
+Else
+	Print F
+End if
+End
+
+7.	Find the largest and smallest element in an array
+Start
+Read the elements of the array arr of size n
+Max=arr[0]
+Min=arr[0]
+For i=1 to n
+	If arr[i] > Max
+		Max=arr[i]
+	Else if arr[i] < Min
+		Min=arr[i]
+	End if
+End for
+Print  “largest:”, Max and “smallest:”, Min
+End
+
+8.	Count how many even and odd numbers are in a list
+Start
+Read the elements of the list a
+Even=0
+Odd=0
+For i in a 
+	If i % 2==0
+		Even=even+1
+	Else
+		Odd=odd+1
+	End if
+End for
+Print “count of even”, even
+Print “count of odd”, odd
+End
+
+9.	Generate a pattern like a pyramid or triangle
+*
+* *
+* * *
+* * * *
+Start
+n=4
+for i=1to n
+	for j=1 to i
+		print “*”
+	end for
+	print \n
+end for
+end
+
+10.	Find the second largest number in a list
+Start
+If len(list) < 2
+	Return “no second largest number”
+Dup_items=set()
+Uniq=[]
+For i in list
+	If i not in Dup_items
+		Dup_items.add(i)
+		Uniq.append[i]
+End for
+Uniq.sort()
+Return Uniq[-2]
+End
+
+11.	Find the sum of diagonal elements in a 2D matrix
+Start
+Sum=0
+For i=1 to m
+	For j=1 to n
+		If i==j
+			Sum=sum+arr[i,j]
+		End if 
+	End for
+End for
+Print “sum: ”,Sum
+end
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
