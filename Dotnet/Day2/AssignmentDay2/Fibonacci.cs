@@ -11,15 +11,15 @@ namespace AssignmentDay2
         public static void FibonacciSeries()
         {
             Console.WriteLine("Enter the limit");
-            int num=int.Parse(Console.ReadLine());
+            int num = int.Parse(Console.ReadLine());
             int a = 0;
             int b = 1;
-            int sum =0;
+            int sum = 0;
             Console.WriteLine(a);
             Console.WriteLine(b);
-            while (sum <= num) 
+            for (int i = 1; i < num; i++)
             {
-                sum = a +b;
+                sum = a + b;
                 a = b;
                 b = sum;
                 Console.WriteLine(sum);
