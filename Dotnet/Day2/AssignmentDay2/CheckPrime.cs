@@ -10,17 +10,24 @@ namespace AssignmentDay2
     {
         public static void CheckPrimeNum(int num)
         {
-            bool flag = true; ;
-            for (int i = 2; i < num; i++)
+            bool flag = true;
+            if (num <= 1)
             {
-                if (num % i == 0)
-                {
-                    flag = false;
-                    break;
-                }
-               
+                flag = false;
             }
-            if(flag)
+            else
+            {
+                for (int i = 2; i < num; i++)
+                {
+                    if (num % i == 0)
+                    {
+                        flag = false;
+                        break;
+                    }
+
+                }
+            }
+            if (flag)
             {
                 Console.WriteLine("Prime number");
             }
