@@ -13,7 +13,7 @@ namespace AssignmentDay2
             double tax;
             if (amt < 10000)
             {
-                tax = amt * 0.5;
+                tax = amt * 0.05;
                 Console.WriteLine(" Tax for amount " + amt + " is " + tax);
             }
             else if (amt >= 10000 && amt < 15000)
