@@ -20,7 +20,7 @@ insert into Employee(EmpFirstName,EmpLastName,EmpDeptId,EmpSalary) values ('Minu
 select * from Employee;
 --Select specific columns
 select EmpFirstName,EmpSalary from Employee;
---Select with a WHERE clause to filter results\
+--Select with a WHERE clause to filter results\ 
 select * from Employee where EmpDeptId=2;
 
 --What is the purpose of the IDENTITY keyword in the CREATE TABLE statement?
