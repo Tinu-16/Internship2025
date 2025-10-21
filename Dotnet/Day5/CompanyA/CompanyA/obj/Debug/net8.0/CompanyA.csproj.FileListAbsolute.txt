@@ -1,0 +1,11 @@
+C:\Users\tinu.clara\source\repos\CompanyA\CompanyA\bin\Debug\net8.0\CompanyA.deps.json
+C:\Users\tinu.clara\source\repos\CompanyA\CompanyA\bin\Debug\net8.0\CompanyA.dll
+C:\Users\tinu.clara\source\repos\CompanyA\CompanyA\bin\Debug\net8.0\CompanyA.pdb
+C:\Users\tinu.clara\source\repos\CompanyA\CompanyA\obj\Debug\net8.0\CompanyA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tinu.clara\source\repos\CompanyA\CompanyA\obj\Debug\net8.0\CompanyA.AssemblyInfoInputs.cache
+C:\Users\tinu.clara\source\repos\CompanyA\CompanyA\obj\Debug\net8.0\CompanyA.AssemblyInfo.cs
+C:\Users\tinu.clara\source\repos\CompanyA\CompanyA\obj\Debug\net8.0\CompanyA.csproj.CoreCompileInputs.cache
+C:\Users\tinu.clara\source\repos\CompanyA\CompanyA\obj\Debug\net8.0\CompanyA.dll
+C:\Users\tinu.clara\source\repos\CompanyA\CompanyA\obj\Debug\net8.0\refint\CompanyA.dll
+C:\Users\tinu.clara\source\repos\CompanyA\CompanyA\obj\Debug\net8.0\CompanyA.pdb
+C:\Users\tinu.clara\source\repos\CompanyA\CompanyA\obj\Debug\net8.0\ref\CompanyA.dll
