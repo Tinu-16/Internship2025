@@ -22,7 +22,7 @@ select * from Employee where EmpLastName like '[B,R,S]%';
 select * from Employee where EmpFirstName like '[A-M]%';
 
 --List employees whose last name doesn't start with a vowel (A, E, I, O, U).
-select * from Employee where EmpLastName not like '[A,E,I,O,U]%';
+select * from Employee where EmpLastName not like '[A,E,I,O,U]%'; 
 
 --Identify employees earning more than $80,000 annually. 
 select * from Employee where EmpSalary*12 > 80000;
