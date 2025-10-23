@@ -1,0 +1,14 @@
+C:\Users\tinu.clara\source\repos\Library Management System\Library Management System\bin\Debug\net8.0\LibrarySystem.exe
+C:\Users\tinu.clara\source\repos\Library Management System\Library Management System\bin\Debug\net8.0\LibrarySystem.deps.json
+C:\Users\tinu.clara\source\repos\Library Management System\Library Management System\bin\Debug\net8.0\LibrarySystem.runtimeconfig.json
+C:\Users\tinu.clara\source\repos\Library Management System\Library Management System\bin\Debug\net8.0\LibrarySystem.dll
+C:\Users\tinu.clara\source\repos\Library Management System\Library Management System\bin\Debug\net8.0\LibrarySystem.pdb
+C:\Users\tinu.clara\source\repos\Library Management System\Library Management System\obj\Debug\net8.0\LibrarySystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tinu.clara\source\repos\Library Management System\Library Management System\obj\Debug\net8.0\LibrarySystem.AssemblyInfoInputs.cache
+C:\Users\tinu.clara\source\repos\Library Management System\Library Management System\obj\Debug\net8.0\LibrarySystem.AssemblyInfo.cs
+C:\Users\tinu.clara\source\repos\Library Management System\Library Management System\obj\Debug\net8.0\LibrarySystem.csproj.CoreCompileInputs.cache
+C:\Users\tinu.clara\source\repos\Library Management System\Library Management System\obj\Debug\net8.0\LibrarySystem.dll
+C:\Users\tinu.clara\source\repos\Library Management System\Library Management System\obj\Debug\net8.0\refint\LibrarySystem.dll
+C:\Users\tinu.clara\source\repos\Library Management System\Library Management System\obj\Debug\net8.0\LibrarySystem.pdb
+C:\Users\tinu.clara\source\repos\Library Management System\Library Management System\obj\Debug\net8.0\LibrarySystem.genruntimeconfig.cache
+C:\Users\tinu.clara\source\repos\Library Management System\Library Management System\obj\Debug\net8.0\ref\LibrarySystem.dll
