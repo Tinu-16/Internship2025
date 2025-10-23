@@ -1,0 +1,11 @@
+public class Employee 
+{ 
+	public string Name; 
+	public int Age; 
+	public double Salary; 
+	public void CalculateBonus() 
+	{ 
+		double bonus = Salary * 0.1; 
+		double incrementedSalary = Salary + bonus; 
+	} 
+}
