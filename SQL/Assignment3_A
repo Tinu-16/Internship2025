@@ -1,0 +1,112 @@
+ -- 1. List all patients and their appointments, including patients who have never had an appointment.
+select  
+	p.PatientID,
+	p.PatientName,
+	a.AppointmentID,
+	a.AppointmentDate,
+	a.DoctorID 
+from Healthcare.Patients p
+left join Healthcare.Appointments a 
+	on p.PatientID = a.PatientID;
+
+-- 2. Display all doctors and their scheduled appointments, including doctors without any appointments.
+select  
+	d.DoctorID,
+	d.DoctorName,
+	d.Specialty,
+	a.AppointmentID,
+	a.PatientID,
+	a.AppointmentDate 
+from Healthcare.Doctors d
+left join Healthcare.Appointments a 
+	on d.DoctorID = a.DoctorID;
+
+-- 3. Show all medications and the patients they've been prescribed to, including medications that haven't been prescribed.
+select  
+	m.MedicationID,
+	m.MedicationName,
+	d.PatientName,
+	p.PrescriptionDate
+from Healthcare.Medications m
+left join Healthcare.Prescriptions p 
+	on m.MedicationID = p.MedicationID
+left join Healthcare.Patients d 
+	on p.PatientID=d.PatientID;
+
+-- 4. List all possible patient-doctor combinations, regardless of whether an appointment has occurred.
+select 
+	p.PatientName,
+	d.DoctorName 
+from Healthcare.Patients p 
+cross join Healthcare.Doctors d;
+
+-- 5. Display all prescriptions with patient and medication information, including prescriptions where either the patient or medication information is missing.
+select  
+	p.PrescriptionID,
+	p.PrescriptionDate,
+	m.MedicationName,
+	m.DosageForm,
+	d.PatientName 
+from Healthcare.Prescriptions p
+left join Healthcare.Patients d 
+	on p.PatientID=d.PatientID
+left join Healthcare.Medications m 
+	on m.MedicationID = p.MedicationID;
+
+-- 6. Show all patients who have never been prescribed any medication, along with their appointment history.
+SELECT 
+    p.PatientID,
+    p.PatientName,
+    a.AppointmentID,
+    a.AppointmentDate,
+    a.DoctorID,
+	pr.PrescriptionID
+FROM Healthcare.Patients p
+left JOIN Healthcare.Appointments a 
+	ON p.PatientID = a.PatientID
+LEFT JOIN Healthcare.Prescriptions pr 
+    ON p.PatientID = pr.PatientID
+WHERE pr.PrescriptionID IS NULL;
+
+-- 7. List all doctors who have appointments in the next week, along with the patients they're scheduled to see.
+SELECT 
+	d.DoctorName, 
+	d.Specialty,
+	a.AppointmentDate,
+	p.PatientName
+FROM Healthcare.Doctors d
+join Healthcare.Appointments a on d.DoctorID=a.DoctorID
+join Healthcare.Patients p on p.PatientID=a.PatientID
+WHERE AppointmentDate >= DATEADD(DAY, 8 - DATEPART(WEEKDAY, GETDATE()), CAST(GETDATE() AS DATE))
+  AND AppointmentDate <  DATEADD(DAY, 15 - DATEPART(WEEKDAY, GETDATE()), CAST(GETDATE() AS DATE));
+
+-- 8. Display all medications prescribed to patients over 60 years old, including medications not prescribed to this age group.
+SELECT 
+	distinct m.MedicationName,
+	pt.PatientName,
+	DATEDIFF(YEAR,pt.DateOfBirth,GETDATE()) 
+FROM Healthcare.Medications m
+left join Healthcare.Prescriptions p 
+	on p.MedicationID=m.MedicationID
+LEFT join Healthcare.Patients pt 
+	on pt.PatientID=p.PatientID
+and DATEDIFF(YEAR,pt.DateOfBirth,GETDATE()) > 60;
+
+-- 9. Show all appointments from last year and any associated prescription information.
+SELECT 
+	a.AppointmentID,
+	a.AppointmentDate,
+	p.*
+FROM Healthcare.Appointments a
+join Healthcare.Prescriptions p 
+	on a.PatientID=p.PatientID
+join Healthcare.Medications m
+	on m.MedicationID=p.MedicationID
+where YEAR(a.AppointmentDate)=YEAR(GETDATE())-1;
+
+-- 10. List all possible specialty-medication combinations, regardless of whether a doctor of that specialty has prescribed that medication.
+select 
+	d.Specialty,
+	m.MedicationName
+from Healthcare.Doctors d
+cross join Healthcare.Medications m
