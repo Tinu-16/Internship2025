@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table {
+                border-collapse: separate;       
+                border-spacing: 0;              
+                border: 1px solid #555;          
+                width: 50%;
+                border-right: none;             
+                border-bottom: 4px double #9b9696;   
+                font-family: Arial, sans-serif;
+                margin: 20px auto;
+            }
+
+            th, td {
+                border: 1px solid #999;
+                border-spacing: 2;
+                border-right: none;              
+                padding: 8px 12px;
+                text-align: left;
+            }
+
+            th {
+                background-color: #8b8989;
+                border-bottom:2px solid ;
+            }
+
+            #firstColumn {
+                background-color: rgb(222, 215, 215);
+                font-weight: bold;
+            }
+            ul{
+            list-style-type: none; 
+            }
+            #unorder li{
+                border: 1px solid black;
+                width:100px;
+                height:25px;
+                margin-bottom: 5px;
+                text-align: center;
+            }
+            #unorder li:nth-child(odd) {
+                background-color: rgb(152, 148, 148);
+            }
+            #unorder li:nth-child(even) {
+                background-color: rgb(18, 17, 17);
+                color: white;
+            }
+            #lists li{
+                border: 1px solid black;
+                width:150px;
+                height:25px;
+                margin-bottom: 5px;
+                text-align: center;
+                background-color: #999;
+            }
+            #lists ul li{
+                background-color: #999;
+                margin-left: -25px;
+            } 
+            button{
+               width:150px;
+               height:50px;
+               background-color: #8b8989;
+               border-radius: 25px;
+               font-family: Arial, sans-serif;
+               font-size: 18px;
+            }
+            input,button{
+               width:150px;
+               height:50px;
+               border-radius: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <table>
+        <tr>
+            <th>State</th>
+            <th>Chief Minister</th>
+            <th>Capital</th>
+        </tr>
+        <tr>
+            <td id="firstColumn">Andhra</td>
+            <td>Jagan</td>
+            <td>Amaravati</td>
+        </tr>
+        <tr>
+            <td id="firstColumn">Telangana</td>
+            <td>KCR</td>
+            <td>Hyderabad</td>
+        </tr>
+        <tr>
+            <td id="firstColumn">Karnataka</td>
+            <td>Bommai</td>
+            <td>Bangalore</td>
+        </tr>
+        <tr>
+            <td id="firstColumn">Maharashtra</td>
+            <td>Uddav Thakery</td>
+            <td>Mumbai</td>
+        </tr>
+        <tr>
+            <td id="firstColumn">Kerala</td>
+            <td>Pinarai</td>
+            <td>Trivandrum</td>
+        </tr>
+    </table>
+
+    <h3>Open Google Links</h3>
+  <p><a href="https://www.google.com" target="_self">Open Google (same page)</a></p>
+  <p><a href="https://www.google.com" target="_blank">Open Google (new tab)</a></p>
+  <h3>List</h3>
+  <div>
+    <ul id="unorder">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Five</li>
+        <li>Six</li>
+    </ul>
+  </div>
+  <h3>Nested List</h3>
+  <div>
+    <ul id="lists">
+        <li>1</li>
+            <ul>
+                <li>1.1</li>
+                <li>1.2</li>
+            </ul>
+        <li>2</li>
+            <ul>
+                <li>2.1</li>
+                <li>2.2</li>
+                <li>2.3</li>
+            </ul>
+    </ul>
+  </div>
+  <div>
+      <h3>Alert Me</h3>
+    <button onclick="showAlert()">Alert Me</button>
+  </div>
+  <div>
+      <h3>Leap year</h3>
+    <input type="year" id="yearInput" placeholder="Enter a year">
+    <button onclick="checkLeapYear('#yearInput')">Check</button>
+    <p id="result"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
