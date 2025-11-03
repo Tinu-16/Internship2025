@@ -1,0 +1,6 @@
+@Day12_Web_API_Oct29_HostAddress = http://localhost:5239
+
+GET {{Day12_Web_API_Oct29_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
