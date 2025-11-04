@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #qs1,#qs2
+            {
+                height: auto;
+                width:1000px;
+                background-color: rgb(197, 189, 189);
+                border-radius: 5px;
+                padding-top: 10px;
+                padding-left: 10px;
+                margin-top: 5px;
+                padding-bottom: 10px;
+            }
+            #part1{
+                padding-left: 10px;
+            }
+            input{
+                height: 50px;
+                width: 250px;
+                border-radius: 15px;
+            }
+            button{
+                height: 50px;
+                width: 100px;
+                border-radius: 15px;
+                background-color: rgb(204, 199, 199);
+            }
+            #part2
+            {
+                display: flex;
+                gap: 8px;
+            }
+            #message
+            {
+                display: none;
+            }
+        </style>
+    </head>
+   <body>
+    
+    <div id="qs1">
+        <h3>1. Enter anything and find its type</h3>
+        <div id="part1">
+            <input type="text" id="userInput" placeholder="Enter anything">
+            <button onclick="showType()">Click Me</button>
+            <p id="output"></p>
+        </div>
+    </div>
+    <div id="qs2">
+        <h3>2. Sum of two numbers</h3>
+        <div >
+            <div id="part2">
+                <input type="number" id="num1" placeholder="Enter a number">
+                <h3>+</h3>
+                <input type="number" id="num2" placeholder="Enter a number">
+                <button onclick="showSum()">Calculate</button>
+            </div>
+            <p id="result"></p>
+        </div>
+    </div>
+    <div id="qs2">
+        <h3>3. Boolean Toggle Message</h3>
+            <div>
+                <button onclick="showMessage()">Show Message</button>
+            </div>
+            <p id="message">Hello World</p>
+        </div>
+    </div>
+    <div id="qs2">
+        <h3>4. Array of Favorite Colors</h3>
+            <div>
+                <input type="text" id="inputColor" placeholder="Enter your favourite color">
+                <button onclick="AddColor()">Add Colour</button>
+            </div>
+            <p id="colorList"></p>
+        </div>
+    </div>
+    <div id="qs2">
+        <h3>5. Student info</h3>
+            <div>
+                <div id="part2">
+                    <input type="text" id="name" placeholder="Enter name"><br>
+                    <input type="number" id="age" placeholder="Enter age"><br>
+                    <input type="text" id="grade" placeholder="Enter grade"><br>
+                    <button onclick="showStudent()">Show Student Info</button>
+                </div>
+            </div>
+            <p id="studentInfo"></p>
+        </div>
+    </div>
+    <div id="qs2">
+        <h3>6. Background Color</h3>
+            <div>
+                <button onclick="changeColor('Red')">Red</button>
+                <button onclick="changeColor('Green')">Green</button>
+                <button onclick="changeColor('Blue')">Blue</button>
+            </div>
+            <p id="colorList"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>    
+  </body>
+</html>
