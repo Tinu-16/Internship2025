@@ -1,0 +1,17 @@
+ul{
+            list-style-type: none; 
+            }
+            #unorder li{
+                border: 1px solid black;
+                width:100px;
+                height:25px;
+                margin-bottom: 5px;
+                text-align: center;
+            }
+            #unorder li:nth-child(odd) {
+                background-color: rgb(152, 148, 148);
+            }
+            #unorder li:nth-child(even) {
+                background-color: rgb(18, 17, 17);
+                color: white;
+            }
