@@ -1,0 +1,29 @@
+ table {
+                border-collapse: separate;       
+                border-spacing: 0;              
+                border: 1px solid #555;          
+                width: 50%;
+                border-right: none;             
+                border-bottom: 4px double #9b9696;   
+                font-family: Arial, sans-serif;
+                margin: 20px auto;
+            }
+
+            th, td {
+                border: 1px solid #999;
+                border-spacing: 2;
+                border-right: none;              
+                padding: 8px 12px;
+                text-align: left;
+            }
+
+            th {
+                background-color: #8b8989;
+                border-bottom:2px solid ;
+            }
+
+            #firstColumn {
+                background-color: rgb(222, 215, 215);
+                font-weight: bold;
+            }
+            

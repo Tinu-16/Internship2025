@@ -1,0 +1,15 @@
+#lists li{
+                border: 1px solid black;
+                width:150px;
+                height:25px;
+                margin-bottom: 5px;
+                text-align: center;
+                background-color: #999;
+            }
+            #lists ul li{
+                background-color: #999;
+                margin-left: -25px;
+            } 
+ul{
+            list-style-type: none; 
+            }
