@@ -1,0 +1,107 @@
+1. Output prediction
+Inside if: 30 --let has block scope and it exists only inside if
+Inside function: 20 --When the function is called num is assigned a value of 20
+Outside: 10 --num has global scope
+
+
+2️. Hoisting Behavior (var vs let vs const)
+Write a small program to demonstrate the hoisting difference between var, let, and const.
+calculateTotal()
+function calculateTotal() 
+{
+        console.log("Item price:", itemPrice);  //undefined since not initialised before it is called
+        console.log("Tax rate:", taxRate);      //error
+        console.log("Discount:", discount);     //error
+
+        var itemPrice = 100;   
+        let taxRate = 0.1;     
+        const discount = 10;  
+
+        let total = itemPrice + itemPrice * taxRate - discount;
+        console.log("Final Total:", total);   //we will get total
+}
+Show accessing each variable before declaration, observe output/errors, and explain
+the difference.
+console.log(a);  //undefined since not initialised before it is called
+console.log(b);  //error let not supported hoisting 
+console.log(c);  //const not supported hoisting and we need to declare and initialise before it is called
+var a = 5;
+let b = 10;
+const c = 15;
+
+3. Create a program and demonstrate:
+---------------- Reassigning var, let, const---------------
+console.log("var reassignment is possible")
+var a=20
+console.log("Before reassigning var variable: "+ a);
+
+a=30
+console.log("After reassigning var variable: "+ a);   //reassignment work
+
+console.log("let reassignment is possible")
+let b=20
+console.log("Before reassigning let variable: "+ b);
+
+b=30
+console.log("After reassigning let variable: "+ b);     //reassignment work
+
+console.log("const reassignment is not possible")  
+const c=20
+console.log("Before reassigning const variable: "+ c);
+
+c=30
+console.log("After reassigning const variable: "+ c);  //will not work
+
+------------ Redeclaring var, let, const--------------
+console.log("var redeclaration is possible")
+var a=20
+console.log("Before redeclaration var variable: "+ a);
+
+var a=30
+console.log("After redeclaration var variable: "+ a);
+
+console.log("let redeclaration is not possible")
+let b=20
+console.log("Before redeclaration let variable: "+ b);
+
+let b=30
+console.log("After redeclaration let variable: "+ b);
+
+console.log("const redeclaration is not possible")
+const c=20
+console.log("Before redeclaration const variable: "+ c);
+
+const c=30
+console.log("After redeclaration const variable: "+ c);
+
+4️. Convert Normal Functions to Arrow Functions
+Convert the below functions to arrow functions, then call them with sample values.
+
+function multiply(a, b) {
+return a * b;
+}
+var multiply=(a,b) => a*b
+console.log(multiply(2,3))
+
+function greet(name) {
+return "Hello "; + name;
+}
+var greet =(name) => "Hello "+ name;
+console.log(greet("Tinu"))
+
+5️. Arrow Function + Array Methods
+Given the array:
+const numbers = [2, 5, 8, 11, 14];
+
+Create arrow functions to:
+1. Return a new array where each number is doubled (map)
+var double = numbers.map(num => num *2);
+console.log(double)
+
+2. Return only even numbers (filter)
+var even =numbers.filter(num => num % 2 ==0);
+console.log(even)
+
+3. Return total sum (reduce)
+var sum =numbers.reduce((total, num) => total + num, 0);
+console.log(sum)
