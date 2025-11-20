@@ -63,21 +63,27 @@ namespace BankingConsoleApp2
             try
             {
                 var customer = _context.Customers.Include(c => c.Address).FirstOrDefault(c => c.Id == customerId);
-
-                if (customer.Address == null)
+                if (customer != null)
                 {
-                    newAddress.CustomerId = customerId;
-                    _context.Addresses.Add(newAddress);
+                    if (customer.Address == null)
+                    {
+                        newAddress.CustomerId = customerId;
+                        _context.Addresses.Add(newAddress);
+                    }
+                    else
+                    {
+                        customer.Address.Street = newAddress.Street;
+                        customer.Address.City = newAddress.City;
+                        customer.Address.State = newAddress.State;
+                        customer.Address.PostalCode = newAddress.PostalCode;
+                        customer.Address.Country = newAddress.Country;
+                    }
+                    _context.SaveChanges();
                 }
                 else
                 {
-                    customer.Address.Street = newAddress.Street;
-                    customer.Address.City = newAddress.City;
-                    customer.Address.State = newAddress.State;
-                    customer.Address.PostalCode = newAddress.PostalCode;
-                    customer.Address.Country = newAddress.Country;
+                    Console.WriteLine($"Customer with customer id : {customerId} does not exists");
                 }
-                _context.SaveChanges();
             }
             catch (Exception ex)
             {
